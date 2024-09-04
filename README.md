@@ -21,3 +21,11 @@ docker run -e AZP_URL="https://dev.azure.com/wai0211" -e AZP_TOKEN="<token>" -e 
 Env variables to feed into the container are detailed at https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops#environment-variables
 
 AZP_TOKEN - the PAT token for the agent to connect to Azure DevOps
+
+
+
+
+
+# Self Hosted Agent
+
+Assuming that I have an app service that can only be accessed inside a VNET, I can use a self-hosted agent to deploy the app service. The self-hosted agent can be deployed in an ACA inside the VNET. The self-hosted agent can then be used to deploy the app service.
