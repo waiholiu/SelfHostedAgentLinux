@@ -6,6 +6,12 @@ RUN apt update
 RUN apt upgrade -y
 RUN apt install -y curl git jq libicu70
 
+# Install .NET SDK
+RUN curl -sSL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
+RUN chmod +x dotnet-install.sh
+RUN ./dotnet-install.sh --channel 6.0 --install-dir /usr/share/dotnet
+ENV PATH="/usr/share/dotnet:$PATH"
+
 WORKDIR /azp/
 
 COPY ./start.sh ./
@@ -19,4 +25,4 @@ USER agent
 # Another option is to run the agent as root.
 # ENV AGENT_ALLOW_RUNASROOT="true"
 
-ENTRYPOINT [ "./start.sh" ]
+ENTRYPOINT ["./start.sh"]
