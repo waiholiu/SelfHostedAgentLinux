@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM mcr.microsoft.com/azure-cli:cbl-mariner2.0
 ENV TARGETARCH="linux-x64"
 # Also can be "linux-arm", "linux-arm64".
 
@@ -11,6 +11,7 @@ RUN curl -sSL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
 RUN chmod +x dotnet-install.sh
 RUN ./dotnet-install.sh --channel 6.0 --install-dir /usr/share/dotnet
 ENV PATH="/usr/share/dotnet:$PATH"
+
 
 WORKDIR /azp/
 
