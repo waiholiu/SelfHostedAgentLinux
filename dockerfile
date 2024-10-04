@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/azure-cli:cbl-mariner2.0
+FROM ubuntu:22.04
 ENV TARGETARCH="linux-x64"
 # Also can be "linux-arm", "linux-arm64".
 
