@@ -4,7 +4,7 @@ ENV TARGETARCH="linux-x64"
 
 RUN apt update
 RUN apt upgrade -y
-RUN apt install -y curl git jq libicu70 valgrind
+RUN apt install -y curl git jq libicu70 valgrind sudo
 
 # Install .NET SDK
 RUN curl -sSL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
