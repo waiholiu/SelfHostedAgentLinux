@@ -1,4 +1,5 @@
-FROM ubuntu:22.04
+FROM mcr.microsoft.com/azure-cli:2.77.0
+
 ENV TARGETARCH="linux-x64"
 # Also can be "linux-arm", "linux-arm64".
 
